@@ -1,7 +1,7 @@
 name: "Nginx Proxy Manager (Latest)"
 slug: "nginx_proxy_manager_latest"
 description: "Nginx Proxy Manager add-on (jc21/nginx-proxy-manager:latest) with Ingress and Stream port exposure"
-version: "1.0.0"
+version: "1.0.1"
 url: "https://nginxproxymanager.com/"
 arch:
   - amd64
