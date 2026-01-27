@@ -26,8 +26,10 @@ ports_description:
   443/tcp: "Public HTTPS (Proxy Hosts)"
   1882/tcp: "Streams port (TCP/UDP forwarding, e.g. MQTT)"
 
-# Persist data (HA mounts /data for add-ons automatically; no extra 'map' needed)
-# We also persist /etc/letsencrypt into /data via the init script included below.
+map:
+  - type: ssl
+    read_only: false
+    path: /etc/letsencrypt
 
 environment:
   TZ: "Europe/London"
