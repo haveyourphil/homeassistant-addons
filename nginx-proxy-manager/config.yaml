@@ -1,0 +1,38 @@
+name: "Nginx Proxy Manager (Latest)"
+slug: "nginx_proxy_manager_latest"
+description: "Nginx Proxy Manager add-on (jc21/nginx-proxy-manager:latest) with Ingress and Stream port exposure"
+version: "1.0.0"
+url: "https://nginxproxymanager.com/"
+arch:
+  - amd64
+
+startup: services
+boot: auto
+
+# Show in sidebar via Ingress
+ingress: true
+ingress_port: 81
+ingress_entry: /
+panel_icon: mdi:server-network
+panel_title: "Nginx Proxy Manager"
+
+# Only expose what you asked for:
+ports:
+  443/tcp: 443
+  1882/tcp: 1882
+
+ports_description:
+  443/tcp: "Public HTTPS (NPM proxy hosts)"
+  1882/tcp: "Stream port (use NPM Streams to forward TCP/UDP, e.g. MQTT)"
+
+# Persist data (HA mounts /data for add-ons automatically; no extra 'map' needed)
+# We also persist /etc/letsencrypt into /data via the init script included below.
+
+environment:
+  TZ: "Europe/London"
+
+# NPM manages its own auth; Ingress just makes it available in the HA UI
+panel_admin: false
+
+# Optional: keep container simple
+init: false
