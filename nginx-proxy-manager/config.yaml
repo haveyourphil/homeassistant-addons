@@ -1,7 +1,7 @@
 name: "Nginx Proxy Manager (Latest)"
 slug: "nginx_proxy_manager_latest"
 description: "Nginx Proxy Manager add-on (jc21/nginx-proxy-manager:latest) with Ingress and Stream port exposure"
-version: "1.0.1"
+version: "1.0.2"
 url: "https://nginxproxymanager.com/"
 arch:
   - amd64
@@ -19,10 +19,12 @@ panel_admin: false
 
 # Exposed ports (host side configurable in UI)
 ports:
+  81/tcp: null
   443/tcp: null
   1882/tcp: null
 
 ports_description:
+  81/tcp: "NPM Management Port"
   443/tcp: "Public HTTPS (Proxy Hosts)"
   1882/tcp: "Streams port (TCP/UDP forwarding, e.g. MQTT)"
 
