@@ -1,21 +1,13 @@
 name: "Nginx Proxy Manager (Latest)"
 slug: "nginx_proxy_manager_latest"
 description: "Nginx Proxy Manager add-on (jc21/nginx-proxy-manager:latest) with Ingress and Stream port exposure"
-version: "1.0.2"
+version: "1.1.0"
 url: "https://nginxproxymanager.com/"
 arch:
   - amd64
 
 startup: services
 boot: auto
-
-# Show in sidebar via Ingress
-ingress: true
-ingress_port: 81
-ingress_entry: /
-panel_icon: mdi:server-network
-panel_title: "Nginx Proxy Manager"
-panel_admin: false
 
 # Exposed ports (host side configurable in UI)
 ports:
