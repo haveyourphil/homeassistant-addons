@@ -18,4 +18,4 @@ ports_description:
   7007/tcp: "Dozzle agent endpoint (connect from a Dozzle server)"
 
 environment:
-  - DOZZLE_HOSTNAME=home-assistant
+  DOZZLE_HOSTNAME: home-assistant
