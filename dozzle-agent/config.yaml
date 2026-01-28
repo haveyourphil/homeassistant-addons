@@ -1,7 +1,7 @@
 name: "Dozzle Agent"
 slug: "dozzle_agent"
 description: "Dozzle agent mode for multi-host Dozzle setups"
-version: "1.0.0"
+version: "1.0.1"
 url: "https://dozzle.dev/guide/agent"
 arch:
   - amd64
