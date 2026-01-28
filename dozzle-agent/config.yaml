@@ -1,0 +1,21 @@
+name: "Dozzle Agent"
+slug: "dozzle_agent"
+description: "Dozzle agent mode for multi-host Dozzle setups"
+version: "1.0.0"
+url: "https://dozzle.dev/guide/agent"
+arch:
+  - amd64
+
+startup: services
+init: false
+
+protected: false
+docker_api: true
+
+ports:
+  7007/tcp: 7007
+ports_description:
+  7007/tcp: "Dozzle agent endpoint (connect from a Dozzle server)"
+
+environment:
+  - DOZZLE_HOSTNAME=home-assistant
