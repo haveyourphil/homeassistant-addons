@@ -9,8 +9,7 @@ arch:
 startup: services
 init: false
 
-#protected: false
-#docker_api: true
+docker_api: true
 
 ports:
   7007/tcp: 7007
