@@ -18,3 +18,4 @@ ports_description:
 
 environment:
   DOZZLE_HOSTNAME: home-assistant
+  DOCKER_HOST: "unix:///run/docker.sock"
