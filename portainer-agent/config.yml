@@ -1,0 +1,20 @@
+name: "Portainer Agent"
+slug: "portainer_agent"
+description: "Portainer Agent"
+version: "1.0.0"
+url: "https://docs.portainer.io/admin/environments/add/docker/agent"
+arch:
+  - amd64
+
+startup: services
+init: false
+
+docker_api: true
+
+ports:
+  9001/tcp: 9001
+ports_description:
+  9001/tcp: "Portainer agent endpoint"
+
+environment:
+  DOCKER_HOST: "unix:///run/docker.sock"
